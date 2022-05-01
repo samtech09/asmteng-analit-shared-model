@@ -1,4 +1,4 @@
-package models
+package asmteng_analit_shared_model
 
 //type UserResp struct {
 //	Qid       int

@@ -1,4 +1,4 @@
-package models
+package asmteng_analit_shared_model
 
 type Qmeta struct {
 	Qid       int
