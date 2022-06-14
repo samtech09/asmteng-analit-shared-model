@@ -33,7 +33,7 @@ type UserResponse struct {
 
 type UserPerformance struct {
 	Testid  int
-	Userid  int
+	Userid  int64
 	Subjid  int16
 	Topicid int16
 	Score   float32
@@ -70,7 +70,7 @@ type UserPerformance struct {
 
 type TestScore struct {
 	Testid int
-	Userid int
+	Userid int64
 	Rank   int
 	Marks  float32
 	Langid byte
@@ -99,7 +99,7 @@ type TestPerformance struct {
 
 type UserRespData struct {
 	TestID int
-	UserID int
+	UserID int64
 	Data   []UserResponse
 }
 
