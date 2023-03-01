@@ -26,7 +26,7 @@ type UserResponse struct {
 	Iscorrect   bool
 	Timestat    int8
 	Review      bool
-	Visited     bool
+	Visited     int
 	Marks       float32
 	TimestatStr string //Super/Perfect/Weak/...
 }
