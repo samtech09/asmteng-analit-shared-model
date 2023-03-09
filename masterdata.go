@@ -55,6 +55,12 @@ type Test struct {
 	TotalMarks float32
 }
 
+type QSection struct {
+	Qid          int
+	SectionID    int
+	CorrectMarks int16
+}
+
 // type TestSubject struct {
 //         testid int
 //         subjid int16
