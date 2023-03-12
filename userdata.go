@@ -15,13 +15,12 @@ package asmteng_analit_shared_model
 //}
 
 type UserResponse struct {
-	Qid   int
-	Seqno int16
-	//Sectionid int
-	Subjid  int16
-	Topicid int
-	//Subject     string
-	//Topic       string
+	Qid         int
+	Seqno       int16
+	Sectid      int
+	Subjid      int16
+	Subject     string
+	Topic       string
 	Correctans  string
 	Response    string
 	Timetaken   int16
