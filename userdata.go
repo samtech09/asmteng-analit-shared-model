@@ -22,6 +22,7 @@ type UserResponse struct {
 	Subject     string
 	Topic       string
 	Correctans  string
+	CorrMarks   float32
 	Response    string
 	Timetaken   int16
 	Iscorrect   bool
