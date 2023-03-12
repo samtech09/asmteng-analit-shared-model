@@ -43,14 +43,14 @@ type UserPerformance struct {
 	Score   float32 `json:"score"`  // correct marks - negative marks
 	WScore  float32 `json:"wscore"` // total negative marks subtracted
 
-	Totques     int16   `json:"totques"`
-	Totmarks    float32 `json:"totmarks"`
-	Answered    int16   `json:"answered"`
-	Correct     int16   `json:"correct"`
-	Review      int16   `json:"review"`
-	Reviewans   int16   `json:"reviewans"`
-	Notanswered int16   `json:"notanswered"`
-	Notvisited  int16   `json:"notvisited"`
+	Totques int16 `json:"totques"`
+	//Totmarks    float32 `json:"totmarks"`
+	Answered    int16 `json:"answered"`
+	Correct     int16 `json:"correct"`
+	Review      int16 `json:"review"`
+	Reviewans   int16 `json:"reviewans"`
+	Notanswered int16 `json:"notanswered"`
+	Notvisited  int16 `json:"notvisited"`
 
 	TotStdTime int16   `json:"totstdtime"`
 	Giventime  int16   `json:"giventime"`
