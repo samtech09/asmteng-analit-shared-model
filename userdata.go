@@ -15,11 +15,13 @@ package asmteng_analit_shared_model
 //}
 
 type UserResponse struct {
-	Qid         int
-	Seqno       int16
-	Subject     string
-	Subjid      int16
-	Topic       string
+	Qid   int
+	Seqno int16
+	//Sectionid int
+	Subjid  int16
+	Topicid int
+	//Subject     string
+	//Topic       string
 	Correctans  string
 	Response    string
 	Timetaken   int16
@@ -35,11 +37,12 @@ type UserResponse struct {
 type UserPerformance struct {
 	Testid  int
 	Userid  int64
+	Sectid  int
 	Subjid  int16
 	Topicid int16
 	Score   float32
 
-	//Totalques      int16
+	Totalques      int16
 	Answered       int16
 	Correct        int16
 	Review         int16
@@ -47,10 +50,10 @@ type UserPerformance struct {
 	Notanswered    int16
 	Notvisited     int16
 
-	//Totaltime int16
-	Giventime int16
-	OntimeC   int16 // correct + ontime
-	OntimeW   int16 // wrong + ontime
+	TotalStdTime int16
+	Giventime    int16
+	OntimeC      int16 // correct + ontime
+	OntimeW      int16 // wrong + ontime
 
 	OvertimeC int16 // correct + overtime
 	OvertimeW int16 // wrong + overtime

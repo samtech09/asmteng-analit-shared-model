@@ -2,6 +2,7 @@ package asmteng_analit_shared_model
 
 type Qmeta struct {
 	Qid       int
+	Sectid    int
 	Subjid    int16
 	Topicid   int16
 	Corrans   int16
@@ -14,7 +15,7 @@ type Qmeta struct {
 }
 
 type Language struct {
-	ID       byte
+	//ID       byte
 	Langcode string
 	Title    string
 }
