@@ -17,8 +17,8 @@ package asmteng_analit_shared_model
 type UserResponse struct {
 	Qid         int
 	Seqno       int16
-	Sectid      int
 	Subjid      int
+	Sectid      int
 	Subject     string
 	Topic       string
 	Correctans  string
@@ -27,7 +27,7 @@ type UserResponse struct {
 	Iscorrect   bool
 	Timestat    int8
 	Review      bool
-	Visited     int
+	Visited     int16
 	Marks       float32
 	Timestr     string
 	TimestatStr string //Super/Perfect/Weak/...
