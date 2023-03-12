@@ -10,7 +10,7 @@ type Qmeta struct {
 	Mintime   int16
 	Lengthy   int16
 	Difflevel int16
-	Tricky    bool
+	Tricky    byte
 	CorrMarks float32 // extra field not exist in database
 }
 
