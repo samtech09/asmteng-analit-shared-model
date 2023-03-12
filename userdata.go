@@ -18,7 +18,7 @@ type UserResponse struct {
 	Qid         int
 	Seqno       int16
 	Sectid      int
-	Subjid      int16
+	Subjid      int
 	Subject     string
 	Topic       string
 	Correctans  string
