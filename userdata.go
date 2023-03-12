@@ -37,8 +37,8 @@ type UserPerformance struct {
 	Testid  int     `json:"testid"`
 	Userid  int64   `json:"userid"`
 	Sectid  int     `json:"sectid"`
-	Subjid  int16   `json:"subjid"`
-	Topicid int16   `json:"topicid"`
+	Subjid  int     `json:"subjid"`
+	Topicid int     `json:"topicid"`
 	Score   float32 `json:"score"`
 
 	Totques     int16 `json:"totques"`

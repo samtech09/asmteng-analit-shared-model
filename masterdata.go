@@ -3,14 +3,14 @@ package asmteng_analit_shared_model
 type Qmeta struct {
 	Qid       int
 	Sectid    int
-	Subjid    int16
-	Topicid   int16
-	Corrans   int16
+	Subjid    int
+	Topicid   int
+	Corrans   string
 	Stdtime   int16
 	Mintime   int16
 	Lengthy   int16
 	Difflevel int16
-	Tricky    byte
+	Tricky    bool
 	CorrMarks float32 // extra field not exist in database
 }
 
