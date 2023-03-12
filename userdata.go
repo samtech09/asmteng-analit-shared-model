@@ -39,15 +39,17 @@ type UserPerformance struct {
 	Sectid  int     `json:"sectid"`
 	Subjid  int     `json:"subjid"`
 	Topicid int     `json:"topicid"`
-	Score   float32 `json:"score"`
+	Score   float32 `json:"score"`  // correct marks - negative marks
+	WScore  float32 `json:"wscore"` // total negative marks subtracted
 
-	Totques     int16 `json:"totques"`
-	Answered    int16 `json:"answered"`
-	Correct     int16 `json:"correct"`
-	Review      int16 `json:"review"`
-	Reviewans   int16 `json:"reviewans"`
-	Notanswered int16 `json:"notanswered"`
-	Notvisited  int16 `json:"notvisited"`
+	Totques     int16   `json:"totques"`
+	Totmarks    float32 `json:"totmarks"`
+	Answered    int16   `json:"answered"`
+	Correct     int16   `json:"correct"`
+	Review      int16   `json:"review"`
+	Reviewans   int16   `json:"reviewans"`
+	Notanswered int16   `json:"notanswered"`
+	Notvisited  int16   `json:"notvisited"`
 
 	TotStdTime int16   `json:"totstdtime"`
 	Giventime  int16   `json:"giventime"`
@@ -57,8 +59,8 @@ type UserPerformance struct {
 	OvertimeW  int16   `json:"overtimew"` // wrong + overtime
 	QuickC     int16   `json:"quickc"`    // Too quick + Correct
 	QuickW     int16   `json:"quickw"`    // Too quick + Wrong
-	CMarks     float32 `json:"cmarks"`    // total correct marks of correct-questions without subtracting negative marks of wrong questions
-	WMarks     float32 `json:"wmarks"`    // total correct marks of wrong-questions. It is sum of currect marks of those questions, instead of negative.
+	CQMarks    float32 `json:"cqmarks"`   // total correct marks of correct-questions without subtracting negative marks of wrong questions
+	WQMarks    float32 `json:"wqmarks"`   // total correct marks of wrong-questions. It is sum of currect marks of those questions, instead of negative-marks to show how much marks you lost.
 
 	// Super Attempts	= OntimeC 	(correct + ontime)
 	// Perfect Attempts	= OvertimeC	(correct + overtime)
@@ -80,6 +82,8 @@ type TestPerformance struct {
 	Testid       int     `json:"testid"`
 	Qid          int     `json:"qid"`
 	Sectid       int     `json:"sectid"`
+	Subjid       int     `json:"subjid"`
+	Topicid      int     `json:"topicid"`
 	CorrMarks    float32 `json:"corrmarks"` // uint16 encoded small float value
 	Tottime      int     `json:"tottime"`
 	Totcorrect   int     `json:"totcorrect"`
