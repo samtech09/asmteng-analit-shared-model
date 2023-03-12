@@ -35,34 +35,31 @@ type UserResponse struct {
 }
 
 type UserPerformance struct {
-	Testid  int
-	Userid  int64
-	Sectid  int
-	Subjid  int16
-	Topicid int16
-	Score   float32
+	Testid  int     `json:"testid"`
+	Userid  int64   `json:"userid"`
+	Sectid  int     `json:"sectid"`
+	Subjid  int16   `json:"subjid"`
+	Topicid int16   `json:"topicid"`
+	Score   float32 `json:"score"`
 
-	Totalques      int16
-	Answered       int16
-	Correct        int16
-	Review         int16
-	Reviewanswered int16
-	Notanswered    int16
-	Notvisited     int16
+	Totques     int16 `json:"totques"`
+	Answered    int16 `json:"answered"`
+	Correct     int16 `json:"correct"`
+	Review      int16 `json:"review"`
+	Reviewans   int16 `json:"reviewans"`
+	Notanswered int16 `json:"notanswered"`
+	Notvisited  int16 `json:"notvisited"`
 
-	TotalStdTime int16
-	Giventime    int16
-	OntimeC      int16 // correct + ontime
-	OntimeW      int16 // wrong + ontime
-
-	OvertimeC int16 // correct + overtime
-	OvertimeW int16 // wrong + overtime
-
-	TooQuickC int16 // Too quick + Correct
-	TooQuickW int16 // Too quick + Wrong
-
-	CMarks float32 // total correct marks of correct-questions without subtracting negative marks of wrong questions
-	WMarks float32 // total correct marks of wrong-questions. It is sum of currect marks of those questions, instead of negative.
+	TotStdTime int16   `json:"totstdtime"`
+	Giventime  int16   `json:"giventime"`
+	OntimeC    int16   `json:"ontimec"`   // correct + ontime
+	OntimeW    int16   `json:"ontimew"`   // wrong + ontime
+	OvertimeC  int16   `json:"overtimec"` // correct + overtime
+	OvertimeW  int16   `json:"overtimew"` // wrong + overtime
+	QuickC     int16   `json:"quickc"`    // Too quick + Correct
+	QuickW     int16   `json:"quickw"`    // Too quick + Wrong
+	CMarks     float32 `json:"cmarks"`    // total correct marks of correct-questions without subtracting negative marks of wrong questions
+	WMarks     float32 `json:"wmarks"`    // total correct marks of wrong-questions. It is sum of currect marks of those questions, instead of negative.
 
 	// Super Attempts	= OntimeC 	(correct + ontime)
 	// Perfect Attempts	= OvertimeC	(correct + overtime)
@@ -81,24 +78,21 @@ type TestScore struct {
 }
 
 type TestPerformance struct {
-	Testid int
-	Qid    int
-	//CorrMarks    float32 // uint16 encoded small float value
-	Tottime      int
-	Totcorrect   int
-	Totattempt   int
-	Totreview    int
-	TotrevAns    int // review and answered
-	TotontimeC   int
-	TotontimeW   int
-	TotovertimeC int
-	TotovertimeW int
-	TotquickC    int
-	TotquickW    int
-	// Totontime   int
-	// Totovertime int
-	// Totguessed  int
-	// Totwasted   int
+	Testid       int     `json:"testid"`
+	Qid          int     `json:"qid"`
+	Sectid       int     `json:"sectid"`
+	CorrMarks    float32 `json:"corrmarks"` // uint16 encoded small float value
+	Tottime      int     `json:"tottime"`
+	Totcorrect   int     `json:"totcorrect"`
+	Totattempt   int     `json:"totattempt"`
+	Totreview    int     `json:"totreview"`
+	Totreviewans int     `json:"totreviewans"` // review and answered
+	TotontimeC   int     `json:"totontimec"`
+	TotontimeW   int     `json:"totontimew"`
+	TotovertimeC int     `json:"totovertimec"`
+	TotovertimeW int     `json:"totovertimew"`
+	TotquickC    int     `json:"totquickc"`
+	TotquickW    int     `json:"totquickw"`
 }
 
 type UserRespData struct {
